@@ -26,7 +26,7 @@ module AppsHelpers
         puts "Instance #{i} still booting..."
       end
     end
-    cpu_average / app.total_instances
+    cpu_average / app.running_instances
   end
 
   def app_average_memory app

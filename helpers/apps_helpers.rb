@@ -5,7 +5,7 @@ module AppsHelpers
       app.total_instances += instances
       app.update!
       puts 'Scaling successful. Lets wait a moment for the new instance to start..'
-      sleep 10
+      sleep 5
     rescue  CFoundry::InstancesError
       puts 'Scaling failed'
     rescue CFoundry::AppMemoryQuotaExceeded

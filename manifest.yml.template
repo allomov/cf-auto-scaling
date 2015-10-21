@@ -13,3 +13,4 @@ applications:
       CF_ORGANIZATION: <organization>
       CF_SPACE: <space>
       CF_APPLICATION: <application>
+      CPU_COUNT: 1

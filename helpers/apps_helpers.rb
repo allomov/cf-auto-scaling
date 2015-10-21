@@ -21,7 +21,7 @@ module AppsHelpers
     cpu_average = 0
     app.stats.each do |i, app_stat|
       if app_stat.keys.include? :stats
-        cpu_average += app_stat[:stats][:usage][:cpu].to_f * 100
+        cpu_average += app_stat[:stats][:usage][:cpu].to_f * 100 / cpu_count.to_f
       else
         puts "Instance #{i} still booting..."
       end
@@ -35,6 +35,10 @@ module AppsHelpers
       mem_average += stat[1][:stats][:usage][:mem]
     end
     mem_average / app.total_instances
+  end
+
+  def cpu_count
+    ENV['CPU_COUNT'] || 1
   end
 
 end

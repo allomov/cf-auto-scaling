@@ -67,6 +67,7 @@ end
 
 put '/start-test' do
   $test_start = Time.now.to_i
+  $test_start.to_s
 end
 
 

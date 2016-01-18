@@ -2,7 +2,7 @@ Stupid simple scripts for automaticaly scale applications hosted in a Cloudfound
 
 
 ### Requiremts
-- Ruby 1.9.3 +
+- Ruby 2.1.5 +
 - Apache Benchmark (http://httpd.apache.org/docs/2.2/programs/ab.html)
 - Some CF based PaaS public/private provider with full access to the Cloud Controller API
 

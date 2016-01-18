@@ -25,8 +25,21 @@ GEM
     minitest (5.7.0)
     multi_json (1.11.1)
     multipart-post (1.2.0)
+    rack (1.6.4)
+    rack-protection (1.5.3)
+      rack
     rubyzip (0.9.9)
+    sinatra (1.4.6)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    sinatra-bootstrap (0.6.1)
+      sinatra (>= 1.0)
+      sinatra-outputbuffer
+    sinatra-outputbuffer (0.1.0)
+      sinatra (>= 1.0.a)
     thread_safe (0.3.5)
+    tilt (2.0.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
@@ -35,3 +48,7 @@ PLATFORMS
 
 DEPENDENCIES
   cfoundry (= 4.7.2.rc1)
+  sinatra-bootstrap
+
+BUNDLED WITH
+   1.11.2

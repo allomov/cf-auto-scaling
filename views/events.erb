@@ -1,0 +1,41 @@
+<html>
+  <head>
+  <%= bootstrap_css false, "attribute='foo'"%>
+  <%= bootstrap_js_legacy %>
+  </head>
+  <body>
+    <% container :div do %>
+      <h1>Auto Scaling Events</h1>
+      <% if events.empty? %>
+        <a href="/csv">CSV</a>
+      <% end %>
+  
+      <% if events.empty? %>
+        <h3 style="color: #ccc">There is no events yet.</h2>
+      <% else %>
+        <table class=".table-striped">
+            <thead>
+                <tr>
+                    <th>Time of test</th>
+                    <th>Event type</th>
+                    <th>Instances Count</th>
+                </tr>
+            </thead>
+            <tbody>
+              <% events.each do |e| %>
+                <tr>
+                    <td><%= e.timestamp %></td>
+                    <td><%= e.type %></td>
+                    <td><%= e.instances_count %></td>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>      
+      <% end %>
+
+
+    <% end %>
+        
+    <%= bootstrap_js_default %>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 ---
-target: 'https://api.<your pass>'
+api: 'https://api.<your pass>'
 username: '<username>'
 password: '<some pass>'
 organization: '<an organization>'

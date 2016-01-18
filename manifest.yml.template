@@ -3,7 +3,7 @@ applications:
   - name: autoscaler
     memory: 512M
     instances: 1
-    command: bundle exec ./bin/auto_scale.rb
+    command: bundle exec rackup -p $PORT
     no-route: true
     buildpack: https://github.com/cloudfoundry/buildpack-ruby.git
     env:

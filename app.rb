@@ -10,6 +10,7 @@ require 'cfoundry'
 require 'stats_helpers'
 require 'apps_helpers'
 require 'cloud_foundry_manager'
+require 'scale_event'
 
 require 'sinatra'
 require 'sinatra/bootstrap'
